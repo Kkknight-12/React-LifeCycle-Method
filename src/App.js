@@ -19,19 +19,15 @@ class App extends Component {
   render(){
     if( this.state.errorMessage && !this.state.lat ){
       return (
-        <div className="App">
-          <SeasonDisplay>
-            <div>Error: {this.state.errorMessage}</div>
-          </SeasonDisplay>
-        </div>
+        <h1>Error: { this.state.errorMessage }</h1>
       )
     }
 
     if( !this.state.errorMessage && this.state.lat ){
       return (
         <div className="App">
-          <SeasonDisplay>
-            <div>Latitude: {this.state.lat}</div>
+          {/* sending state as prop */}
+          <SeasonDisplay lat={ this.state.lat } >
           </SeasonDisplay>
         </div>
       )
@@ -39,11 +35,9 @@ class App extends Component {
 
     return (
       <div className="App">
-            <SeasonDisplay>
-              <div>
-                <h3> Loading....</h3>
-              </div>
-            </SeasonDisplay>
+        <div>
+          <h3> Loading....</h3>
+        </div>
       </div>
     )
   }
