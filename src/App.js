@@ -1,5 +1,6 @@
 import SeasonDisplay from './SeasonDisplay';
 import { Component } from 'react';
+import Spinner from './Spinner'
 
 class App extends Component {
 
@@ -36,7 +37,7 @@ class App extends Component {
     return (
       <div className="App">
         <div>
-          <h3> Loading....</h3>
+          <Spinner message="Please accept location request"/>
         </div>
       </div>
     )
