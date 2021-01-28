@@ -2,12 +2,10 @@ import SeasonDisplay from './SeasonDisplay';
 import { Component } from 'react';
 
 class App extends Component {
-  
-  constructor(props) {
-    super(props);
-    this.state = { lat: null, errorMessage: '' };
 
-  }
+  // we can initialize state without constructor 
+  // babel take care of the stuff and adjust or code to suit browser.
+  state = { lat: null, errorMessage: '' };
 
   // official React Documentation prefer not loading data inside constructor function
   // if you keep you data loading code inside componentDidMount your code will look clean and easy to follow
